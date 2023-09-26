@@ -1,4 +1,4 @@
-// Elabore um pragrama em C++ usando o namespace std, que faça um cadastro e consultas de pacientes de uma determinada clinica. 
+// Elabore um pragrama em C++, que faça um cadastro e consultas de pacientes de uma determinada clinica. E no final faça uma consulta de paciente por cpf e mostre todos os dados
 // Dados dos pacientes: CPF, nome,  email, celular. Utilize duas funções
 
 #include <iostream>
