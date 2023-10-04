@@ -1,0 +1,85 @@
+/******************************************************************************
+Questao de prova C++ | UEMG | Professora Vania.
+
+1- Simule uma agenda de compromissos.Escreva  um  trecho  de códigopara  fazer 
+a  criaçãodos  novos  tipos  de  dados conformesolicitado abaixo:
+Data: composto de dia, mêse ano._ 
+Compromisso:  composto  de  uma  data, horário e  texto  que  descreve  o compromisso.
+No final busque por mes todos os compromissos do mes, e tambem pelo ano. Crie duas
+variaveis inteiras A e M.
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+struct compromisso {
+  
+  string compromissoDat;  
+};
+
+struct data {
+    
+    int dia;
+    int mes;
+    int ano;
+};
+
+int main()
+{
+    int m, a;
+    
+    compromisso agenda[2];
+    data dataAgenda[2];
+    
+    for(int i=0; i<2; i++){
+        
+        cout << "Digite o compromisso: ";
+        cin >> agenda[i].compromissoDat;
+        
+        cout << "Digite o dia: ";
+        cin >> dataAgenda[i].dia;
+        
+        cout << "Digite o numero do mes: ";
+        cin >> dataAgenda[i].mes;
+        
+        cout << "Digite o ano: ";
+        cin >> dataAgenda[i].ano;
+        
+        cout << endl;
+    }
+    
+    cout << "Digite o mes para ver todos os compromisso do mes: ";
+    cin >> m;
+    
+    cout << endl;
+    
+    cout << "Este sao todos os compromissos do mes digitado: ";
+    cout << endl;
+    
+    for (int i=0; i<2; i++){
+        
+        if(m == dataAgenda[i].mes){
+        cout <<agenda[i].compromissoDat << endl;
+        }
+    }
+    
+    cout << endl;
+    
+    cout << "Digite o ano para ver todos os compromisso do ano digitado: ";
+    cin >> a;
+    
+    cout << endl;
+    
+    cout << "Este sao todos os compromissos deste ano: ";
+    cout << endl;
+    
+    for (int i=0; i<2; i++){
+        
+        if(a == dataAgenda[i].ano){
+            cout << agenda[i].compromissoDat << endl;
+        }
+    }
+    
+    return 0;
+}
