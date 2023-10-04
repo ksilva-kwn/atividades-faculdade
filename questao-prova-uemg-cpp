@@ -1,10 +1,12 @@
 /******************************************************************************
 Questao de prova C++ | UEMG | Professora Vania.
 
-1- Simule uma agenda de compromissos.Escreva  um  trecho  de códigopara  fazer 
-a  criaçãodos  novos  tipos  de  dados conformesolicitado abaixo:
+1- Simule uma agenda de compromissos (com um vetor de 5 posicoes).Escreva  um  trecho  de código para fazer 
+a criaçãodos novos tipos de dados conforme solicitado abaixo:
+
 Data: composto de dia, mêse ano._ 
 Compromisso:  composto  de  uma  data, horário e  texto  que  descreve  o compromisso.
+
 No final busque por mes todos os compromissos do mes, e tambem pelo ano. Crie duas
 variaveis inteiras A e M.
 *******************************************************************************/
@@ -29,10 +31,10 @@ int main()
 {
     int m, a;
     
-    compromisso agenda[2];
-    data dataAgenda[2];
+    compromisso agenda[5];
+    data dataAgenda[5];
     
-    for(int i=0; i<2; i++){
+    for(int i=0; i<5; i++){
         
         cout << "Digite o compromisso: ";
         cin >> agenda[i].compromissoDat;
@@ -57,7 +59,7 @@ int main()
     cout << "Este sao todos os compromissos do mes digitado: ";
     cout << endl;
     
-    for (int i=0; i<2; i++){
+    for (int i=0; i<5; i++){
         
         if(m == dataAgenda[i].mes){
         cout <<agenda[i].compromissoDat << endl;
@@ -74,7 +76,7 @@ int main()
     cout << "Este sao todos os compromissos deste ano: ";
     cout << endl;
     
-    for (int i=0; i<2; i++){
+    for (int i=0; i<5; i++){
         
         if(a == dataAgenda[i].ano){
             cout << agenda[i].compromissoDat << endl;
