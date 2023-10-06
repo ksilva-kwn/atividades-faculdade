@@ -1,0 +1,41 @@
+/******************************************************************************
+3- Faça um programa que calcule a area e o perimetro de um retangulo
+usando uma função com duas variaveis passadas por referência.
+
+*******************************************************************************/
+
+#include <iostream>
+
+using namespace std;
+
+void calcularArea (float& a, float& b, float area, float perimetro){
+    
+    perimetro = 2*(a + b);
+    
+    area = b*a;
+    
+    
+    cout << "A area do retangulo é de: " << area << " m2" << endl;
+    cout << "O perimetro do retangulo é de: " << perimetro << " M";
+    
+}
+
+int main()
+{
+    float a;
+    float b;
+    float area;
+    float perimetro;
+    
+    cout << "Insira a altura do retangulo: ";
+    cin >> a;
+    cout << endl;
+    
+    cout << "Insira a base do retangulo: ";
+    cin >> b;
+    cout << endl;
+    
+    calcularArea(a,b,perimetro,area);
+    
+    return 0;
+}
